@@ -60,4 +60,4 @@ if ingredients_list:
         session.sql(my_insert_stmt).collect()
     
         #st.success('Your Smoothie is ordered',icon="✅")        
-        st.write('Your Smoothie is ordered',name_on_order)
+        st.success(st.write('Your Smoothie is ordered',name_on_order),icon="✅")
