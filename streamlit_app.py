@@ -61,5 +61,5 @@ if ingredients_list:
     
         #st.success('Your Smoothie is ordered',icon="✅")        
         st.success(
-                st.success('Your Smoothie is ordered')
+                st.success('Your Smoothie is ordered'),
                                st.success(name_on_order),icon="✅")
