@@ -11,7 +11,7 @@ st.write(
 
 name_on_order = st.text_input('Name on Smoothie')
 st.write('The Name on your Smoothie will be', name_on_order)
-
+#SiS to SniS
 cnx = st.connection("snowflake")
 session = cnx.session()
 my_dataframe = session.table("SMOOTHIES.PUBLIC.FRUIT_OPTIONS").select(col('FRUIT_NAME'),col('SEARCH_ON'))
