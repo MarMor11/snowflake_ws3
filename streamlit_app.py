@@ -12,6 +12,7 @@ st.write(
 
 name_on_order = st.text_input('Name on Smoothie')
 st.write('The Name on your Smoothie will be', name_on_order)
+
 #SiS to SniS
 cnx = st.connection("snowflake")
 session = cnx.session()
@@ -58,5 +59,6 @@ if ingredients_list:
     if time_to_insert:
         session.sql(my_insert_stmt).collect()
     
-        st.success('Your Smoothie is ordered',icon="✅")
+        #st.success('Your Smoothie is ordered',icon="✅")
+        st.success(st.write('Your Smoothie is ordered, ',name_on_order),icon="✅")
         
