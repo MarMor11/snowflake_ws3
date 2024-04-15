@@ -18,7 +18,12 @@ session = cnx.session()
 my_dataframe = session.table("SMOOTHIES.PUBLIC.FRUIT_OPTIONS").select(col('FRUIT_NAME'),col('SEARCH_ON'))
 #st.dataframe(data=my_dataframe, use_container_width=True)    #for demonstration only
 #st.stop()                                                    #for demonstration only       
-    
+
+#convert snowflake dataframe into pandas dataframe, so we can use LOC function
+pd_df=my_dataframe.to_pandas()
+st.dataframe(pd_df)
+st.stop()
+
 ingredients_list = st.multiselect(          #Variable: ingredients _list -> wird als Liste ausgegeben
 'Choose up to 5 ingredients:'
 , my_dataframe
